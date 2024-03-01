@@ -13,7 +13,7 @@ app.use(cors(
 ));
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://test:test123@cluster0.bcsxex4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://test:test123@cluster0.bcsxex4.mongodb.net/?retryWrites=true&w=majority")
 
 app.post('/register',(req,res)=>{
     EmployeeModel.create(req.body)
