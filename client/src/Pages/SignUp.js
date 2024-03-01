@@ -23,7 +23,7 @@ const SignUp = () => {
     initialValues: initialValues,
     validationSchema: schema,
     onSubmit:(values)=>{
-      axios.post('http://localhost:3001/register',{name:values.name,email:values.email,password:values.password,cpassword:values.cpassword})
+      axios.post('https://guvi-task-git-main-prospers-projects-d9ccee31.vercel.app/register',{name:values.name,email:values.email,password:values.password,cpassword:values.cpassword})
       .then(result => {console.log(result)  
       nav('/home')
       alert("You have succesfully signed up")})
