@@ -19,6 +19,7 @@ const SignUp = () => {
     password: Yup.string().min(3).required("Please Enter Your Password"),
     cpassword: Yup.string().oneOf([Yup.ref('password')], 'Passwords must match'),
   })
+  axios.default.withCredentials = true;
   const {values,handleBlur,handleChange,handleSubmit,errors}= useFormik({
     initialValues: initialValues,
     validationSchema: schema,
