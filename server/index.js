@@ -5,7 +5,14 @@ const EmployeeModel = require('./models/Employees')
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+       {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+))
 
 mongoose.connect("mongodb+srv://test:test123@cluster0.bcsxex4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
