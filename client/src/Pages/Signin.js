@@ -19,7 +19,7 @@ const Signin = () => {
     initialValues: initialValues,
     validationSchema: schema,
     onSubmit:(values)=>{
-      axios.post('http://localhost:3001/login',{email:values.email,password:values.password})
+      axios.post('https://guvi-task-git-main-prospers-projects-d9ccee31.vercel.app/login',{email:values.email,password:values.password})
       .then(result => {console.log(result)
         if(result.data === "Success"){
           nav('/home')
